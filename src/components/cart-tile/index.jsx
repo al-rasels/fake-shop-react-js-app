@@ -8,25 +8,30 @@ function CartTile({ cartItem }) {
   }
   return (
     <>
-      <div className="flex item p-5 jus  bg-red-500 mt-2 mb-2 rounded-xl">
+      <div className="flex items-center max-w-lg py-3 px-5 bg-white shadow-sm mt-2 mb-2 ms-4 justify-center rounded-xl text-gray-900">
         <div className="flex p-3">
+          <div className="max-w-20 max-h-20 px-2">
+
           <img
-            className="h-28 rounded-lg"
             src={cartItem.image}
             alt="{cartItem.titile}"
-          />
-          <div className="ml-10 self-start spcae-y-5">
-            <h1 className="text-xl text-white border-2 rounded-lg font-bold">
-              {cartItem?.title}
+            />
+            </div>
+          <div className="mx-3 align-middle spcae-y-5">
+            <h1 className="text-gray-900 font-light w-64">
+              {cartItem.title.length<=30?cartItem.title:cartItem.title.slice(0,30)+'...'}
             </h1>
-            <p className="text-white font-extrabold">{cartItem?.price}$</p>
+<span className="flex my-2 gap-2">
+        
+            <p className="text-gray-900 text-sm font-bold">Total:{cartItem?.price}$</p>
+</span>
           </div>
         </div>
         <div>
           <button
             onClick={handleRemoveFromCart}
-            className="bg-red-950 text-white border-2 rounded-lg font-bold p-4">
-            Remove from Cart
+            className="text-white bg-red-700 hover:bg-red-800 focus:outline-none focus:ring-4 focus:ring-red-300 font-medium rounded-full text-sm px-5 py-2.5 text-center me-2 mb-2 dark:bg-red-600 dark:hover:bg-red-700 dark:focus:ring-red-900">
+            Remove
           </button>
         </div>
       </div>
