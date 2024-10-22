@@ -11,7 +11,7 @@ function Cart() {
     setTotalCart(cart.reduce((acc, curr) => acc + curr.price, 0));
   }, [cart]);
   return (
-    <div className="flex justify-center">
+    <div className="flex justify-center bg-blue-50">
       {cart && cart.length ? (
         <>
           <div className="min-h-[80vh] grid md:grid-cols-2 max-w-6xl mx-auto">
