@@ -6,7 +6,7 @@ import Header from "./components/header";
 
 function App() {
   return (
-    <div>
+    <div className=" bg-blue-50 ">
       <Header />
       <Routes>
         <Route exact path="/" element={<Home />} />
