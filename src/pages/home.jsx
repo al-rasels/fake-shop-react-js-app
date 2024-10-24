@@ -29,7 +29,7 @@ function Home() {
             visible={true}></Bars>
         </div>
       ) : (
-        <div className="min-h-[80vh] grid sm:grid-cols-2 md:grid-cols-3 lg:grid-col-4 max-w-6xl mx-auto p-3">
+        <div className="bg-slate-100 grid sm:grid-cols-2 md:grid-cols-3 lg:grid-col-4 max-w-6xl mx-auto p-3">
           {products && products.length
             ? products.map((productItems) => (
                 <ProductTile product={productItems} />

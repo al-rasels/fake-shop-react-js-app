@@ -10,33 +10,32 @@ function ProductTile({ product }) {
     dispatch(removeFromCart(product.id));
   }
   return (
-    <div className="group flex flex-col items-center border-2 border-red-900 gap-3 p-4 h-[360px] mt-10 ml-5 rounded-xl">
-      <div className="h-[180px]">
+    <article className="flex bg-white flex-col items-center gap-3 mt-10 ml-5 rounded-xl px-2 py-3 shadow-sm hover:border-gray-200 hover:border-2 hover:transform hover:scale-105 duration-300 w-80">
+      <div className="h-[150px] relative flex items-end overflow-hidden rounded-xl object-cover ">
         <img
           src={product.image}
           alt={product.name}
           className="object-cover h-full w-full"
         />
       </div>
+
+      <h3 className="text-slate-700 font-sm mx-3">{product.title}</h3>
       <div>
-        <h1 className="w-40 truncate mt-3 text-gray-700 font-bold text-lg">
-          {product?.title}
-        </h1>
-        <div className="flex items-center justify-center w-full mt-5">
+        <div class="my-3 flex items-center justify-between gap-5">
+          <p class="text-lg font-bold text-blue-500">{product.price} ৳</p>
+
           <button
             onClick={
               cart.some((item) => item.id === product.id)
                 ? handleRemoveFromCart
                 : handleAddToCart
             }
-            className="bg-red-950 text-white border-2 rounded-lg font-bold p-4">
-            {cart.some((item) => item.id === product.id)
-              ? "Remove from Cart"
-              : "Add to Cart"}
+            className="text-sm space-x-1.5 rounded-lg bg-blue-500 px-4 py-1.5 text-white duration-100 hover:bg-blue-600">
+            {cart.some((item) => item.id === product.id) ? "Added" : "Add"}
           </button>
         </div>
       </div>
-    </div>
+    </article>
   );
 }
 
