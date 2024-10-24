@@ -23,7 +23,7 @@ function Cart() {
           </div>
           <div className="w-[300px]">
             <div className="flex flex-col justify-center items-end p-5 space-y-5 mt-14">
-              <h1 className="text-red-800 text-lg font-bold">
+              <h1 className="text-blue-800 text-lg font-bold">
                 Your Cart Summery
               </h1>
               <p>
@@ -51,7 +51,7 @@ function Cart() {
             Your cart is Empty
           </h1>
           <Link to={"/"}>
-            <button className="bg-red-950 text-white border-2 rounded-lg font-bold p-4 mt-5">
+            <button className="bg-blue-950 text-white border-2 rounded-lg font-bold p-4 mt-5">
               SHOP NOW
             </button>
           </Link>

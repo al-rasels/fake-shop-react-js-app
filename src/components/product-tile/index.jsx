@@ -29,7 +29,7 @@ function ProductTile({ product }) {
                 ? handleRemoveFromCart
                 : handleAddToCart
             }
-            className="bg-red-950 text-white border-2 rounded-lg font-bold p-4">
+            className="bg-blue-500 text-white border-2 rounded- font-bold p-4">
             {cart.some((item) => item.id === product.id)
               ? "Remove from Cart"
               : "Add to Cart"}
