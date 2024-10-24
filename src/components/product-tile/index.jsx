@@ -1,5 +1,6 @@
 import { useDispatch, useSelector } from "react-redux";
 import { addToCart, removeFromCart } from "../../store/slices/cartSlice";
+import ReactStars from "react-rating-stars-component";
 function ProductTile({ product }) {
   const dispatch = useDispatch();
   const { cart } = useSelector((state) => state);
@@ -10,7 +11,7 @@ function ProductTile({ product }) {
     dispatch(removeFromCart(product.id));
   }
   return (
-    <article className="flex bg-white flex-col items-center gap-3 my-3 mx-2 rounded-xl px-2 py-3 shadow-sm hover:border-gray-200 hover:border-2 hover:transform hover:scale-105 duration-300 w-80 h-72">
+    <article className="flex bg-white flex-col items-center my-3 mx-2 rounded-xl px-2 py-4 gap-y-1 shadow-sm hover:border-blue-100 hover:border-4 hover:transform hover:scale-105 duration-300 w-80 h-72">
       <div className="h-[150px] relative flex items-end overflow-hidden rounded-xl object-cover">
         <img
           src={product.image}
@@ -20,7 +21,16 @@ function ProductTile({ product }) {
       </div>
 
       <h3 className="text-slate-700 font-sm mx-3">{product.title}</h3>
-      <div>
+      <div className="">
+        <ReactStars
+          count={5}
+          size={24}
+          value={Math.round(product.rating["rate"])}
+          emptyIcon={<i className="far fa-star"></i>}
+          fullIcon={<i className="fa fa-star">{5}</i>}
+          activeColor="#ffd700"></ReactStars>
+      </div>
+      <div className="my-2">
         <div class="flex align-center justify-between gap-3">
           <div class="text-lg font-bold text-blue-500 block">
             $ {product.price}

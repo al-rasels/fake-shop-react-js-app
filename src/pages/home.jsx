@@ -25,17 +25,19 @@ function Home() {
           <Bars
             height={"120"}
             width={"120"}
-            color="rgb(127,29,29)"
+            color="#007FFF"
             visible={true}></Bars>
         </div>
       ) : (
-        <div className="bg-slate-50 rounded-lg grid sm:grid-cols-2 md:grid-cols-3 lg:grid-col-4 max-w-6xl mx-auto p-3">
-          {products && products.length
-            ? products.map((productItems) => (
-                <ProductTile product={productItems} />
-              ))
-            : null}
-        </div>
+        <>
+          <div className="bg-blue-50 backdrop-blur-xl rounded-lg grid sm:grid-cols-2 md:grid-cols-3 lg:grid-col-4 max-w-6xl mx-auto px-auto">
+            {products && products.length
+              ? products.map((productItems) => (
+                  <ProductTile product={productItems} />
+                ))
+              : null}
+          </div>
+        </>
       )}
     </div>
   );

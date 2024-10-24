@@ -14,7 +14,7 @@ function Cart() {
     <div className="flex justify-center bg-blue-50">
       {cart && cart.length ? (
         <>
-          <div className="min-h-[80vh] grid md:grid-cols-2 max-w-6xl mx-auto">
+          <div className="min-h-[80vh] grid md:grid-cols-2 w-1/2 mx-auto">
             <div className="flex-col flex justify-center items-center p-3">
               {cart.map((cartItem) => (
                 <CartTile cartItem={cartItem} />
