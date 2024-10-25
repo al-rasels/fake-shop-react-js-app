@@ -21,14 +21,15 @@ function ProductTile({ product }) {
       </div>
 
       <h3 className="text-slate-700 font-sm mx-3">{product.title}</h3>
-      <div className="">
+      <div className="pointer-events-none">
         <ReactStars
           count={5}
           size={24}
           value={Math.round(product.rating["rate"])}
-          emptyIcon={<i className="far fa-star"></i>}
           fullIcon={<i className="fa fa-star">{5}</i>}
-          activeColor="#ffd700"></ReactStars>
+          activeColor="#ffd700"
+          disabled
+        />
       </div>
       <div className="my-2">
         <div class="flex align-center justify-between gap-3">
