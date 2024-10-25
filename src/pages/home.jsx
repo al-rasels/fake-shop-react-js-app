@@ -30,7 +30,7 @@ function Home() {
         </div>
       ) : (
         <>
-          <div className="bg-blue-50 backdrop-blur-xl rounded-lg grid sm:grid-cols-2 md:grid-cols-3 lg:grid-col-4 max-w-6xl mx-auto px-auto">
+          <div className="bg-blue-50 mx-auto col-12 align-middle backdrop-blur-xl rounded-lg grid sm:grid-cols-2 md:grid-cols-3 lg:grid-col-4  max-w-6xl px-auto">
             {products && products.length
               ? products.map((productItems) => (
                   <ProductTile product={productItems} />
