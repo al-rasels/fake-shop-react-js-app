@@ -23,16 +23,13 @@ function Cart() {
                 ))}
               </div>
             </div>
-            <div className="w-1/3 bg-white rounded-lg ">
-              <div className="flex flex-col justify-center items-center p-5 space-y-5 mt-14">
+            <div className="w-1/3 rounded-lg ">
+              <div className="flex flex-col justify-center bg-white items-center p-5 mt-14 hover:shadow-md hover:scale-105 duration-300 text-gray-800 shadow-sm">
                 <h1 className="text-gray-700 text-lg font-bold">
                   Your Cart Summery
                 </h1>
                 <p>
-                  <span
-                    className="text-gray-800 font-bold  ">
-                    Total Items
-                  </span>
+                  <span className="text-gray-800 font-bold  ">Total Items</span>
                   <span>:{cart.length}</span>
                 </p>
                 <p>
