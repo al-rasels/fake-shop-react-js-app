@@ -12,10 +12,11 @@ function Cart() {
   }, [cart]);
   return (
     <div className="h-screen bg-blue-50 pt-20">
+
       <h1 class="mb-10 text-center text-2xl font-bold">Cart Items</h1>
       {cart && cart.length ? (
         <>
-          <div class="mx-auto max-w-5xl justify-center px-6 md:flex md:space-x-6 xl:px-0">
+          <div class="container justify-around px-6 md:flex md:space-x-6 xl:px-0">
             <div className="w-1/3 grid md:grid-cols-2 mx-auto py-5 px-2">
               <div className="flex-col flex justify-center items-center p-3">
                 {cart.map((cartItem) => (
@@ -23,8 +24,8 @@ function Cart() {
                 ))}
               </div>
             </div>
-            <div className="w-1/3 bg-white rounded-lg ">
-              <div className="flex flex-col justify-center items-center p-5 space-y-5 mt-14">
+            <div className="w-1/3 grid place-content-center bg-white rounded-lg shadow-md">
+              <div className="flex flex-col justify-center items-center p-10 space-y-5">
                 <h1 className="text-gray-700 text-lg font-bold">
                   Your Cart Summery
                 </h1>
