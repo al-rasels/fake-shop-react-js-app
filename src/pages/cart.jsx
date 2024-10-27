@@ -23,8 +23,8 @@ function Cart() {
                 ))}
               </div>
             </div>
-            <div className="w-1/3 bg-white rounded-lg ">
-              <div className="flex flex-col justify-center items-center p-5 space-y-5 mt-14">
+            <div className="w-1/3 rounded-lg ">
+              <div className="flex flex-col justify-center items-center p-5 mt-14 bg-white">
                 <h1 className="text-gray-700 text-lg font-bold">
                   Your Cart Summery
                 </h1>
