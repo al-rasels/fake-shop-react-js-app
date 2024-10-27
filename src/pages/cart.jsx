@@ -30,8 +30,7 @@ function Cart() {
                 </h1>
                 <p>
                   <span
-                    className="text-gray-800 font-bold
-              ">
+                    className="text-gray-800 font-bold  ">
                     Total Items
                   </span>
                   <span>:{cart.length}</span>
@@ -54,7 +53,7 @@ function Cart() {
             Your cart is Empty
           </h1>
           <Link to={"/"}>
-            <button className="bg-red-950 text-white border-2 rounded-lg font-bold p-4 mt-5">
+            <button className="bg-blue-950 text-white border-2 rounded-lg font-bold p-4 mt-5">
               SHOP NOW
             </button>
           </Link>

@@ -11,8 +11,9 @@ function ProductTile({ product }) {
     dispatch(removeFromCart(product.id));
   }
   return (
-    <article className="flex bg-white flex-col items-center my-3 mx-2 rounded-xl px-2 py-4 gap-y-1 shadow-sm hover:border-blue-100 hover:border-4 hover:transform hover:scale-105 duration-300 w-80 h-72">
-      <div className="h-[150px] relative flex items-end overflow-hidden rounded-xl object-cover">
+
+    <div className="group flex flex-col justify-end items-center border-2 bg-white aspect-[3/4] gap-4 p-4 h-[360px] mt-10 ml-5 rounded-xl">
+      <div className="h-2/6">
         <img
           src={product.image}
           alt={product.name}
