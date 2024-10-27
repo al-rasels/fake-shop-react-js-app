@@ -11,7 +11,7 @@ function CartTile({ cartItem }) {
       <div className="flex items-center py-3 px-5 bg-white shadow-sm mt-2 mb-2 ms-4 justify-center rounded-xl text-gray-900">
         <div className="flex">
           <div className="max-w-20 max-h-20 px-2">
-            <img src={cartItem.image} alt="{cartItem.titile}" />
+            <img src={cartItem.image} alt={cartItem.titile} />
           </div>
           <div className="mx-3 align-middle spcae-y-5">
             <h1 className="text-gray-900 font-light w-64">
