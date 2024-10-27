@@ -11,7 +11,7 @@ function ProductTile({ product }) {
     dispatch(removeFromCart(product.id));
   }
   return (
-    <div className="group flex flex-col justify-end items-center border-2 bg-white aspect-[3/4] gap-4 p-4 h-80 mt-8 ml-5 rounded-xl shadow-sm">
+    <div className="group flex flex-col justify-end items-center border-2 bg-white aspect-[3/4] gap-4 p-4 h-80 my-8 ml-5 rounded-xl shadow-sm">
       <div className="h-2/6">
         <img
           src={product.image}
