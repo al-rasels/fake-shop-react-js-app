@@ -11,37 +11,39 @@ function Cart() {
     setTotalCart(cart.reduce((acc, curr) => acc + curr.price, 0));
   }, [cart]);
   return (
-    <div className="flex justify-center bg-blue-50">
+    <div className="h-screen bg-blue-50 pt-20">
+      <h1 class="mb-10 text-center text-2xl font-bold">Cart Items</h1>
       {cart && cart.length ? (
         <>
-          <div className="min-h-[80vh] grid md:grid-cols-2 max-w-6xl mx-auto">
-            <div className="flex-col flex justify-center items-center p-3">
-              {cart.map((cartItem) => (
-                <CartTile cartItem={cartItem} />
-              ))}
+          <div class="mx-auto max-w-5xl justify-center px-6 md:flex md:space-x-6 xl:px-0">
+            <div className="w-1/3 grid md:grid-cols-2 mx-auto py-5 px-2">
+              <div className="flex-col flex justify-center items-center p-3">
+                {cart.map((cartItem) => (
+                  <CartTile cartItem={cartItem} />
+                ))}
+              </div>
             </div>
-          </div>
-          <div className="w-[300px]">
-            <div className="flex flex-col justify-center items-end p-5 space-y-5 mt-14">
-              <h1 className="text-blue-800 text-lg font-bold">
-                Your Cart Summery
-              </h1>
-              <p>
-                <span
-                  className="text-gray-800 font-bold
+            <div className="w-1/3 bg-white rounded-lg ">
+              <div className="flex flex-col justify-center items-center p-5 space-y-5 mt-14">
+                <h1 className="text-gray-700 text-lg font-bold">
+                  Your Cart Summery
+                </h1>
+                <p>
+                  <span
+                    className="text-gray-800 font-bold  ">
+                    Total Items
+                  </span>
+                  <span>:{cart.length}</span>
+                </p>
+                <p>
+                  <span
+                    className="text-gray-800 font-bold
               ">
-                  Total Items
-                </span>
-                <span>:{cart.length}</span>
-              </p>
-              <p>
-                <span
-                  className="text-gray-800 font-bold
-              ">
-                  Total Ammout
-                </span>
-                <span>:{totalCart}</span>
-              </p>
+                    Total Ammout
+                  </span>
+                  <span>:{totalCart}</span>
+                </p>
+              </div>
             </div>
           </div>
         </>
