@@ -11,7 +11,7 @@ function ProductTile({ product }) {
     dispatch(removeFromCart(product.id));
   }
   return (
-    <div className="group flex flex-col justify-end items-center border-2 bg-white aspect-[3/4] gap-4 p-4 h-[360px] mt-10 ml-5 rounded-xl">
+    <div className="group flex flex-col justify-end items-center border-2 bg-white aspect-[3/4] gap-4 p-4 h-80 mt-8 ml-5 rounded-xl shadow-sm">
       <div className="h-2/6">
         <img
           src={product.image}
@@ -20,7 +20,11 @@ function ProductTile({ product }) {
         />
       </div>
 
-      <h3 className="text-slate-700 font-sm mx-3">{product.title}</h3>
+      <h3 className="text-slate-700 font-sm mx-3">
+        {product.title.length <= 30
+          ? product.title
+          : product.title.slice(0, 30) + "..."}
+      </h3>
       <div className="pointer-events-none">
         <ReactStars
           count={5}
