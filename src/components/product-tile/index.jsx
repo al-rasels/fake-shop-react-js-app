@@ -36,8 +36,8 @@ function ProductTile({ product }) {
         />
       </div>
       <div className="my-2">
-        <div class="flex align-center justify-between gap-3">
-          <div class="text-lg font-bold text-blue-500 block">
+        <div className="flex align-center justify-between gap-3">
+          <div className="text-lg font-bold text-blue-500 block">
             $ {product.price}
           </div>
 

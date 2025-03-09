@@ -1,4 +1,4 @@
-import { Link } from "react-router-dom";
+import { Link, NavLink } from "react-router-dom";
 
 function Header() {
   return (
@@ -15,54 +15,45 @@ function Header() {
             </Link>
           </div>
           <div>
-            <ul class="mt-4 flex flex-col rounded-lg border border-gray-100 bg-gray-50 p-4 md:mt-0 md:flex-row md:space-x-8 md:border-0 md:bg-white md:text-sm md:font-medium">
+            <ul className="mt-4 flex flex-col rounded-lg border border-gray-100 bg-gray-50 p-4 md:mt-0 md:flex-row md:space-x-8 md:border-0 md:bg-white md:text-sm md:font-medium">
               <li>
                 <div className="flex justify-center gap-4 align-middle mt-1">
-                  <Link to={"/"}>
-                    <a
-                      href="/home"
-                      class="block rounded py-2 pl-3 pr-4 text-gray-700 hover:bg-gray-100 md:p-0 md:hover:bg-transparent md:hover:text-blue-700"
-                      aria-current="page">
-                      Home
-                    </a>
-                  </Link>
+                  <NavLink
+                    className="block rounded py-2 pl-3 pr-4 text-gray-700 hover:bg-gray-100 md:p-0 md:hover:bg-transparent md:hover:text-blue-700"
+                    to={"/"}>
+                    Home
+                  </NavLink>
 
-                  <Link to={"/cart"}>
-                    <a
-                      href="/cart"
-                      class="block rounded py-2 pl-3 pr-4 text-gray-700 hover:bg-gray-100 md:p-0 md:hover:bg-transparent md:hover:text-blue-700">
-                      View Cart
-                    </a>
-                  </Link>
-                  <Link to={"/services"}>
-                    <a
-                      href="/services"
-                      class="block rounded py-2 pl-3 pr-4 text-gray-700 hover:bg-gray-100 md:p-0 md:hover:bg-transparent md:hover:text-blue-700">
-                      Services
-                    </a>
-                  </Link>
-                  <Link to={"/contact"}>
-                    <a
-                      href="/contact"
-                      class="block rounded py-2 pl-3 pr-4 text-gray-700 hover:bg-gray-100 md:p-0 md:hover:bg-transparent md:hover:text-blue-700">
-                      Contact
-                    </a>
-                  </Link>
+                  <NavLink
+                    Name="block rounded py-2 pl-3 pr-4 text-gray-700 hover:bg-gray-100 md:p-0 md:hover:bg-transparent md:hover:text-blue-700"
+                    to={"/cart"}>
+                    View Cart
+                  </NavLink>
+                  <NavLink
+                    className="block rounded py-2 pl-3 pr-4 text-gray-700 hover:bg-gray-100 md:p-0 md:hover:bg-transparent md:hover:text-blue-700"
+                    to={"/services"}>
+                    Services
+                  </NavLink>
+                  <NavLink
+                    className="block rounded py-2 pl-3 pr-4 text-gray-700 hover:bg-gray-100 md:p-0 md:hover:bg-transparent md:hover:text-blue-700"
+                    to={"/contact"}>
+                    Contact
+                  </NavLink>
                 </div>
               </li>
             </ul>
           </div>
           <div className="flex gap-3">
-            <a
-              href="/login"
-              class="block rounded py-2 pl-3 pr-4 text-gray-700 font-semibold hover:bg-gray-100 md:p-0 md:hover:bg-transparent md:hover:text-blue-700">
+            <Link
+              className="block rounded py-2 pl-3 pr-4 text-gray-700 font-semibold hover:bg-gray-100 md:p-0 md:hover:bg-transparent md:hover:text-blue-700"
+              to="/login">
               Login
-            </a>
-            <a
-              href="/register"
-              class="block rounded py-2 pl-3 pr-4 font-semibold text-gray-700 hover:bg-gray-100 md:p-0 md:hover:bg-transparent md:hover:text-blue-700">
+            </Link>
+            <Link
+              className="block rounded py-2 pl-3 pr-4 text-gray-700 font-semibold hover:bg-gray-100 md:p-0 md:hover:bg-transparent md:hover:text-blue-700"
+              to="/register">
               Register
-            </a>
+            </Link>
           </div>
         </div>
       </nav>
