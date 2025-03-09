@@ -11,12 +11,12 @@ function Cart() {
     setTotalCart(cart.reduce((acc, curr) => acc + curr.price, 0));
   }, [cart]);
   return (
-    <div className="h-screen  bg-blue-50 pt-20">
+    <div className="h-screen  bg-blue-50 overflow-y-scroll pt-20">
       <h1 class="mb-10 text-center text-2xl font-bold mt-10">Cart Items</h1>
       {cart && cart.length ? (
         <>
           <div className="mx-auto max-w-5xl justify-center px-6 md:flex md:space-x-6 xl:px-0">
-            <div className="w-1/3 grid md:grid-cols-2 mx-auto py-5 px-2">
+            <div className="w-1/3 grid  md:grid-cols-2 mx-auto py-5 px-2">
               <div className="flex-col flex justify-center items-center p-3">
                 {cart.map((cartItem) => (
                   <CartTile cartItem={cartItem} />
